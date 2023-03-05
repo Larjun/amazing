@@ -1,2 +1,0 @@
-# amazing
-Maze Game
