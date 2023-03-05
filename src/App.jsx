@@ -246,16 +246,12 @@ function App() {
     var newY = ypos
     var neighbors = []
     if(board && amaze) {
-      //console.log(amaze)
-      //console.log(board)
+
       if(click != 0) {
         for(let i = 0; i < board.length; i++) {
           if (board[i].props.className && board[i].props.className.includes('player')) {
               console.log(board[i].key)
-              //currX = parseInt(board[i].key.charAt(0))
-              //currY = parseInt(board[i].key.charAt(2))
               var noNeighbors = board[i].key.length
-              //console.log(noNeighbors)
               switch(noNeighbors) {
                 case 5:
                   neighbors.push(parseInt(board[i].key.charAt(4)))
@@ -274,15 +270,6 @@ function App() {
         }
       }
       
-      //console.log(currX, currY, neighbors)
-      //console.log(neighbors)
-      neighbors.sort()
-      //console.log(click, " is getting searched in ", neighbors)
-      //var zeroidx = neighbors.indexOf(0)
-      //var oneidx = neighbors.indexOf(1)
-      //var twoidx = neighbors.indexOf(1)
-      //var threeidx = neighbors.indexOf(1)
-      //console.log(zeroidx, oneidx, twoidx, threeidx)
       console.log(click)
       switch(click) {
         case 0:
@@ -333,7 +320,6 @@ function App() {
     updateBoard(b)
     updateYPos(newY)
     updateXPos(newX)
-    //console.log()
     clicker(-1)
   },[click])
 
